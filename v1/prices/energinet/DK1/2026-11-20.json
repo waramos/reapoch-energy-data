@@ -7,8 +7,8 @@
   "kind": "wholesale day-ahead price (not what a household pays: delivery, fees and taxes are not in it)",
   "licence": "CC BY 4.0",
   "attribution": "Energinet (https://www.energidataservice.dk/); CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); prices converted to per kWh and UTC intervals",
-  "fetched_at": 1795108251.3925786,
-  "mirrored_at": 1795108251.3925786,
+  "fetched_at": 1795113993.363872,
+  "mirrored_at": 1795113993.363872,
   "terms": {
     "licence": "CC BY 4.0",
     "commercial_reuse": "yes",
