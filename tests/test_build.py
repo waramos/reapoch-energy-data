@@ -170,3 +170,10 @@ def test_main_exit_status(tmp_path, monkeypatch):
     assert build.main() == 1
     monkeypatch.setattr(build, 'build', lambda *args: None)
     assert build.main() == 0
+
+
+def test_equal_prices_are_not_rewritten(tmp_path):
+    run(tmp_path, [reply(count=8)])
+    before = output_path(tmp_path).read_bytes()
+    run(tmp_path, [reply(count=8)], now=lambda: 5.0)
+    assert output_path(tmp_path).read_bytes() == before

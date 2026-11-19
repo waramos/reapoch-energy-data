@@ -151,9 +151,15 @@ def build(sources, output=Path('.'), *, today=None, opener=urlopen, now=time.tim
         if document is None:
             print(f'{source} {day}: not published yet')
             continue
-        if path.exists() and len(json.loads(path.read_text(encoding='utf-8'))['intervals']) > len(document['intervals']):
-            print(f'{source} {day}: keeping the fuller file already here')
-            continue
+        if path.exists():
+            held = json.loads(path.read_text(encoding='utf-8'))['intervals']
+            if len(held) > len(document['intervals']):
+                print(f'{source} {day}: keeping the fuller file already here')
+                continue
+            if held == document['intervals']:
+                # Rewriting equal prices would make a commit a run for a new timestamp alone.
+                print(f'{source} {day}: nothing new')
+                continue
         atomic_json(path, document)
         print(f'{source} {day}: wrote {len(document["intervals"])} intervals')
 
