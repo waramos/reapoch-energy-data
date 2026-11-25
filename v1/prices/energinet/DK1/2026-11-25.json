@@ -7,8 +7,8 @@
   "kind": "wholesale day-ahead price (not what a household pays: delivery, fees and taxes are not in it)",
   "licence": "CC BY 4.0",
   "attribution": "Energinet (https://www.energidataservice.dk/); CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); prices converted to per kWh and UTC intervals",
-  "fetched_at": 1795563351.102161,
-  "mirrored_at": 1795563351.102161,
+  "fetched_at": 1795648431.9754374,
+  "mirrored_at": 1795648431.9754374,
   "terms": {
     "licence": "CC BY 4.0",
     "commercial_reuse": "yes",
@@ -18,7 +18,7 @@
     "note": "Distributed applications should use a mirror. Retain Energinet attribution.",
     "checked": "2026-11-19"
   },
-  "complete": false,
+  "complete": true,
   "intervals": [
     [
       1795564800.0,
@@ -570,6 +570,30 @@
       1795646700.0,
       1795647600.0,
       0.205619995,
+      "EUR"
+    ],
+    [
+      1795647600.0,
+      1795648500.0,
+      0.204809998,
+      "EUR"
+    ],
+    [
+      1795648500.0,
+      1795649400.0,
+      0.201270004,
+      "EUR"
+    ],
+    [
+      1795649400.0,
+      1795650300.0,
+      0.201639999,
+      "EUR"
+    ],
+    [
+      1795650300.0,
+      1795651200.0,
+      0.200050003,
       "EUR"
     ]
   ]
